@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -60,7 +60,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
               <h1>Teaching-HEIGVD-RES-2018-Labo-HTTPInfra</h1>
-              <span class="subheading">Christophed Joyet & Patrick Neto</span>
+              <span class="subheading">Christophe Joyet & Patrick Neto</span>
             </div>
           </div>
         </div>
@@ -80,16 +80,6 @@
     </div>
 
     <hr>
-
-    <!-- Main Content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-	          <a class="list-students"></a>
-          </div>     
-      </div>
-    </div>
 
     <!-- Footer -->
     <footer>
@@ -134,9 +124,6 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
-
-    <!-- Custom scripts for printing list of students -->
-    <script src="js/students.js"></script>
 
   </body>
 
