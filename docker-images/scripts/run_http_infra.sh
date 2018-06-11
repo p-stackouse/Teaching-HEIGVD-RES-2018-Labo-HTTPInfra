@@ -14,5 +14,5 @@ docker build -t res/apache_rp /Users/patrickneto/CloudStation/Heig-VD/RES/Labos/
 #Run containers
 docker run -d --name apache_static res/apache_php
 docker run -d --name express_dynamic res/express_students
-docker run -d -p 8080:80 --name apache_reverse res/apache_rp
+docker run -d -p 8080:80 --name apache_reverse -e STATIC_APP=172.17.0.2 -e DYNAMIC_APP=172.17.0.3:3000 res/apache_rp
 
