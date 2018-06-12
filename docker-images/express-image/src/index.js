@@ -1,10 +1,14 @@
 var Chance = require('chance');
 var chance = new Chance();
+var ip = require('ip');
 var Express = require('express');
 var app = Express();
 
+var ip_str = ip.address();
+
 app.get('/', function(req, res) {
    res.send(generateCities());
+   res.render('index', { title: 'Page Title' });
 });
 
 app.listen(3000, function() {

@@ -1,14 +1,12 @@
 <DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title><?php echo $_SERVER['SERVER_ADDR']; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -59,7 +57,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Christophe Joyet & Patrick Neto</h1>
+              <h2>Christophe Joyet & Patrick Neto</h2>
               <div class="list-cities"></div>
             </div>
           </div>
@@ -98,7 +96,6 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
           </div>
         </div>
       </div>
@@ -111,7 +108,7 @@
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
 
-    <!-- Custom scripts for printing list of students -->
+    <!-- Custom scripts for printing list of cities -->
     <script src="js/cities.js"></script>
 
   </body>

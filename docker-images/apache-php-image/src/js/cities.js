@@ -3,18 +3,19 @@ $(function(){
 
 	function loadCities() {
 		$.getJSON( "/api/cities/", function(cities) {
+			$(".list-cities").text("");
 			console.log(cities);
+			var message = "NO city found.";
+
 			if (cities.length > 0) {
 				for(var i = 0; i < cities.length; ++i){
-					var p = document.createElement('p');
-					p.innerHTML = cities[i].city + ", " + cities[i].country;
-					$(".list-cities").append(p);
+					if(i == 0)
+						message = cities[i].city + ", " + cities[i].country + ' - ';
+					else
+						message += cities[i].city + ", " + cities[i].country + ' - ';
 				}
-			}else{
-				var p = document.createElement('p');
-			    p.innerHTML = "No city found";
-			    $(".list-cities").append(p);
 			}
+			$(".list-cities").text(message);
 		});
 	};
 
