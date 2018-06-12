@@ -7,9 +7,9 @@ docker kill apache_static apache_reverse express_dynamic
 docker rm apache_static apache_reverse express_dynamic
 
 #Re building containers
-docker build -t res/apache_php /Users/patrickneto/CloudStation/Heig-VD/RES/Labos/Teaching-HEIGVD-RES-2018-Labo-HTTPInfra/docker-images/apache-php-image
-docker build -t res/express_students /Users/patrickneto/CloudStation/Heig-VD/RES/Labos/Teaching-HEIGVD-RES-2018-Labo-HTTPInfra/docker-images/express-image
-docker build -t res/apache_rp /Users/patrickneto/CloudStation/Heig-VD/RES/Labos/Teaching-HEIGVD-RES-2018-Labo-HTTPInfra/docker-images/apache-reverse-proxy
+docker build -t res/apache_php /home/chris/Documents/HEIG_A2_S2/RES/PatrickHttp/Teaching-HEIGVD-RES-2018-Labo-HTTPInfra/docker-images/apache-php-image
+docker build -t res/express_students /home/chris/Documents/HEIG_A2_S2/RES/PatrickHttp/Teaching-HEIGVD-RES-2018-Labo-HTTPInfra/docker-images/express-image
+docker build -t res/apache_rp /home/chris/Documents/HEIG_A2_S2/RES/PatrickHttp/Teaching-HEIGVD-RES-2018-Labo-HTTPInfra/docker-images/apache-reverse-proxy
 
 #Run containers
 docker run -d --name apache_static res/apache_php

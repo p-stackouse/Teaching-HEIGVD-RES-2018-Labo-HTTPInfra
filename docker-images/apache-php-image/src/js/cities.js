@@ -4,6 +4,7 @@ $(function(){
 	function loadCities() {
 		$.getJSON( "/api/cities/", function(cities) {
 			console.log(cities);
+			$(".list-cities").empty(); //vide la liste
 			if (cities.length > 0) {
 				for(var i = 0; i < cities.length; ++i){
 					var p = document.createElement('p');
