@@ -4,43 +4,34 @@ var Express = require('express');
 var app = Express();
 
 app.get('/', function(req, res) {
-   res.send(generateStudents());
+   res.send(generateCities());
 });
 
 app.listen(3000, function() {
   console.log('Accepting HTTP requests on port 3000.');
 }); 
 
-function generateStudents() {
-	//Generate a random number of students
-	var numberOfStudents = chance.integer({
+function generateCities() {
+	//Generate a random number of cities
+	var  numberOfCities = chance.integer({
 		min: 0,
 		max: 10
 	});
 
-	console.log("Number of students: " + numberOfStudents);
-	var students = [];
+	console.log("Number of cities: " + numberOfCities);
+	var cities = [];
 
-	//Generate a specified number of students
-	for(var i = 0; i < numberOfStudents; i++) {
-		var gender = chance.gender();
-		var birthYear = chance.year({
-			min: 1986,
-			max: 1996
-		});
+	//Generate a specified number of cities
+	for(var i = 0; i < numberOfCities; i++) {
+		var city = chance.city();
+		var country = chance.country()
 
-		//Push student in the list
-		students.push({
-			firstName: chance.first({
-				gender: gender
-			}),
-			lastName: chance.last(),
-			gender: gender,
-			birthday: chance.birthday({
-				year: birthYear
-			})
+		//Push cities in the list
+		cities.push({
+			city: city,
+			country: country
 		});
 	};
-	console.log("List of students: " + students);
-	return students;
+	console.log("List of cities: " + cities);
+	return cities;
 }
