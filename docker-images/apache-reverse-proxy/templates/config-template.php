@@ -1,6 +1,8 @@
 <?php 
-	$dynamic_app= getenv("DYNAMIC_APP");
-	$static_app= getenv("STATIC_APP");
+	$dynamic_app1= getenv("DYNAMIC_APP1");
+	$dynamic_app2= getenv("DYNAMIC_APP2");
+	$static_app1= getenv("STATIC_APP1");
+	$static_app1= getenv("STATIC_APP2");
 ?>
 <VirtualHost *:80>
 	ServerName demo.res.ch
