@@ -4,11 +4,9 @@ var ip = require('ip');
 var Express = require('express');
 var app = Express();
 
-var ip_str = ip.address();
-
 app.get('/', function(req, res) {
    res.send(generateCities());
-   res.render('index', { title: 'Page Title' });
+   res.render('index', { title: ip.address() });
 });
 
 app.listen(3000, function() {
@@ -33,7 +31,8 @@ function generateCities() {
 		//Push cities in the list
 		cities.push({
 			city: city,
-			country: country
+			country: country,
+			ip: ip.address()
 		});
 	};
 	console.log("List of cities: " + cities);
